@@ -6,9 +6,9 @@ import org.springframework.data.annotation.Id;
 
 /**
  * @author Nicholas Murray
- * A model class for the REST and Relational Mapping to the Database.
+ * A entity class for the REST and Relational Mapping to the Database.
  */
-public class ToDo {
+public class ToDoItem {
 
     @Id
     @Getter
@@ -24,12 +24,12 @@ public class ToDo {
     private boolean completed;
 
     //Default constructor for use by the REST controller
-    public ToDo() {}
+    public ToDoItem() {}
 
     /**
      * A parameterised constructor for use when testing
      */
-    public ToDo(String description, boolean completed) {
+    public ToDoItem(String description, boolean completed) {
         setDescription(description);
         setCompleted(completed);
     }
