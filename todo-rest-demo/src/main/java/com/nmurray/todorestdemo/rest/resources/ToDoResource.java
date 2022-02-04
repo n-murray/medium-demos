@@ -23,7 +23,7 @@ public class ToDoResource {
      * the ToDoRepoMock below
      *
      * @Autowired
-     * private ToDoRepository repository;
+     * private ToDoItemRepository repository;
      */
     private ToDoItemRepoMock repository = new ToDoItemRepoMock();
 
@@ -45,7 +45,7 @@ public class ToDoResource {
     @PostMapping
     public ResponseEntity<?> saveToDo(@RequestBody ToDoItem newToDo) {
         ToDoItem persistedToDo = repository.save(newToDo);
-        return new ResponseEntity<>(persistedToDo, HttpStatus.OK);
+        return new ResponseEntity<>(persistedToDo, HttpStatus.CREATED);
     }
 
     /**
@@ -57,7 +57,7 @@ public class ToDoResource {
     @PutMapping
     public ResponseEntity<?> updateToDo(@RequestBody ToDoItem updatedToDo) {
         ToDoItem persistedToDo = repository.save(updatedToDo);
-        return new ResponseEntity<>(persistedToDo, HttpStatus.OK);
+        return new ResponseEntity<>(persistedToDo, HttpStatus.CREATED);
     }
 
     /**
