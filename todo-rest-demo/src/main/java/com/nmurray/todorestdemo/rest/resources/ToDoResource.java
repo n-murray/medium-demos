@@ -2,6 +2,8 @@ package com.nmurray.todorestdemo.rest.resources;
 
 import com.nmurray.todorestdemo.data.entities.ToDoItem;
 import com.nmurray.todorestdemo.data.repositories.ToDoItemRepoMock;
+import com.nmurray.todorestdemo.data.repositories.ToDoItemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +23,12 @@ public class ToDoResource {
     /**
      * Uncomment the below when using with real MongoDB database and remove
      * the ToDoRepoMock below
-     *
-     * @Autowired
-     * private ToDoItemRepository repository;
      */
-    private ToDoItemRepoMock repository = new ToDoItemRepoMock();
+
+     @Autowired
+     private ToDoItemRepository repository;
+
+    //private ToDoItemRepoMock repository = new ToDoItemRepoMock();
 
     /**
      * Returns a list of all persisted {@link ToDoItem} in the repository

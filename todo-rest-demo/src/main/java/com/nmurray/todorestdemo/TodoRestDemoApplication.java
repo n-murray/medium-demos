@@ -2,6 +2,8 @@ package com.nmurray.todorestdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 /**
  * The auto generated MAIN class to start up the Spring Boot application
