@@ -7,8 +7,8 @@ All of my articles can be viewed here: https://medium.com/@n-murray
 
 ## Projects
 
-| Project        | Medium Article |
-|----------------|----------------|
-|todo-rest-demo  |                |
-|                |                |
+| Project          | Medium Article                                                                           |
+|------------------|------------------------------------------------------------------------------------------|
+|spring-rest-demo  | https://medium.com/codex/building-your-first-rest-api-java-and-spring-boot-5f3573f59f55  |
+|flask-rest-demo   |                                                                                          |
  
