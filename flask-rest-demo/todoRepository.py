@@ -4,9 +4,17 @@ import json
 
 
 class TodoRepository:
-    client = MongoClient('localhost', 27017)
-    db = client.todo_database
-    todos = db.todo_collection
+
+    def __init__(self):
+        self.client = MongoClient('localhost', 27017)
+        self.db = self.client.todo_database
+        self.todos = self.db.todo_collection
+
+    def get_id(self, todo_id):
+        todo = self.todos.find_one({"_id": ObjectId(todo_id)})
+        todo = json.loads(json_util.dumps(todo))
+        todo["_id"] = todo["_id"]["$oid"]
+        return todo
 
     def get_all(self):
         cursor = self.todos.find({})
@@ -15,13 +23,6 @@ class TodoRepository:
         for item in todos:
             item["_id"] = item["_id"]["$oid"]
         return todos
-
-    def get_id(self, todo_id):
-        cursor = self.todos.find({"_id": ObjectId(todo_id)})
-        todo = list(cursor)[0]
-        todo = json.loads(json_util.dumps(todo))
-        todo["_id"] = todo["_id"]["$oid"]
-        return todo
 
     def save(self, todo):
         persisted_todo = self.todos.insert_one(todo)
