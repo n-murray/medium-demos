@@ -36,6 +36,6 @@ class TodoRepository:
         return result.modified_count
 
     def delete(self, todo):
-        result = self.todos.delete_one({"_id": ObjectId(todo["id"])})
+        result = self.todos.delete_one({"_id": ObjectId(todo)})
         return result.deleted_count
 

@@ -36,7 +36,7 @@ def update_todo():
     body = request.get_json()
     todo_id = body["_id"]
     updated = repo.update(body)
-    if updated == 1:
+    if updated >= 1:
         response = jsonify(repo.get_id(todo_id))
         response.status_code = 200
     else:
@@ -47,7 +47,7 @@ def update_todo():
 @app.route('/<string:todo_id>', methods=['DELETE'])
 def delete_todo(todo_id):
     deleted = repo.delete(todo_id)
-    if deleted == 1:
+    if deleted >= 1:
         response = jsonify({"status_code": 200})
     else:
         response = jsonify({"status_code": 404})
