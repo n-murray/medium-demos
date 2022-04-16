@@ -10,5 +10,5 @@ All of my articles can be viewed here: https://medium.com/@n-murray
 | Project          | Medium Article                                                                           |
 |------------------|------------------------------------------------------------------------------------------|
 |spring-rest-demo  | https://medium.com/codex/building-your-first-rest-api-java-and-spring-boot-5f3573f59f55  |
-|flask-rest-demo   |                                                                                          |
+|flask-rest-demo   | https://blog.devgenius.io/building-your-first-rest-api-python-and-flask-6eef76524be7     |
  
