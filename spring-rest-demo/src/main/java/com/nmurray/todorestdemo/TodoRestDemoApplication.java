@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  * The auto generated MAIN class to start up the Spring Boot application
  */
 @SpringBootApplication
+@EnableMongoRepositories
 public class TodoRestDemoApplication {
 
     public static void main(String[] args) {

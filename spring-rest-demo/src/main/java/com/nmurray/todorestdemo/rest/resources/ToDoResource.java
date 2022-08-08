@@ -4,6 +4,7 @@ import com.nmurray.todorestdemo.data.entities.ToDoItem;
 import com.nmurray.todorestdemo.data.repositories.ToDoItemRepoMock;
 import com.nmurray.todorestdemo.data.repositories.ToDoItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,8 @@ public class ToDoResource {
      * the ToDoRepoMock below
      */
 
-     @Autowired
+    @Qualifier("toDoItemRepository")
+    @Autowired
      private ToDoItemRepository repository;
 
     //private ToDoItemRepoMock repository = new ToDoItemRepoMock();
