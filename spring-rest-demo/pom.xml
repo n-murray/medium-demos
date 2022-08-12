@@ -99,6 +99,7 @@
             </dependencies>
             <build>
                 <plugins>
+                    <!-- Spring Native Plugins -->
                     <plugin>
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
@@ -112,7 +113,6 @@
                             </image>
                         </configuration>
                     </plugin>
-                    <!-- Spring Native Plugins -->
                     <plugin>
                         <groupId>org.springframework.experimental</groupId>
                         <artifactId>spring-aot-maven-plugin</artifactId>
@@ -130,6 +130,4 @@
             </build>
         </profile>
     </profiles>
-
-
 </project>
